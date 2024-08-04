@@ -132,7 +132,7 @@ export class CreateComponent {
 
     $("#form").submit(function(e:any){
       e.preventDefault();
-      let url = "http://127.0.0.1:8000/product"
+      let url = "https://lightyellow-gaur-319608.hostingersite.com:8000/product"
       console.log(url)
       let formData = {
         name: $('#name').val(),

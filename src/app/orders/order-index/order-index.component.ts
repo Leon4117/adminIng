@@ -23,7 +23,7 @@ export class OrderIndexComponent {
   data: any;
 
   constructor(private http: HttpClient, private router: Router){
-    this.http.get('http://127.0.0.1:8000/orders').subscribe(data => {
+    this.http.get('https://lightyellow-gaur-319608.hostingersite.com:8000/orders').subscribe(data => {
       this.data = data;
 
       const getDateDDMonthYYYY = (e:any) => {
@@ -134,7 +134,7 @@ export class OrderIndexComponent {
   }
 
   submitDeleteModal(){
-    let url = "http://127.0.0.1:8000/orders/validate/" + $('#id_site').val()
+    let url = "https://lightyellow-gaur-319608.hostingersite.com:8000/orders/validate/" + $('#id_site').val()
     this.http.get(url).subscribe(data => {
       console.log(data)
       location.reload()

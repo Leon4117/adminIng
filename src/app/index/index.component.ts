@@ -17,7 +17,7 @@ export class IndexComponent {
   }
 
   revisalogin(){
-    this.http.get('http://127.0.0.1:8000/user/revisa').subscribe((res:any) => {
+    this.http.get('https://lightyellow-gaur-319608.hostingersite.com:8000/user/revisa').subscribe((res:any) => {
       console.log(res)
     })
   }

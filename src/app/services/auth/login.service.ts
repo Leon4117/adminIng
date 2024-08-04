@@ -8,7 +8,7 @@ import { AuthenticationService } from './authentication.service';
 })
 export class LoginService {
 
-  private API_LARAVEL = "http://127.0.0.1:8000/admin";
+  private API_LARAVEL = "https://lightyellow-gaur-319608.hostingersite.com:8000/admin";
 
   constructor(private http: HttpClient, private auth: AuthenticationService) { }
 

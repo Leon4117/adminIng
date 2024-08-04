@@ -34,7 +34,7 @@ export class EditComponent {
 
   constructor(private _router: ActivatedRoute, private http: HttpClient, private route: Router){
     this.dato = this._router.snapshot.paramMap.get('id');
-    let url = "http://127.0.0.1:8000/product/" + this.dato;
+    let url = "https://lightyellow-gaur-319608.hostingersite.com:8000/product/" + this.dato;
     this.http.get(url).subscribe(data => {
       this.dato = data;
       $('#num').val(this.dato.id)
@@ -56,7 +56,7 @@ export class EditComponent {
       $("#file-select4").attr("data-default-file", this.dato.img_4);
 
       $("#form").submit(function(e:any){
-        let url = "http://127.0.0.1:8000/product/"+$('#num').val()
+        let url = "https://lightyellow-gaur-319608.hostingersite.com:8000/product/"+$('#num').val()
 
         let formData = {
           name: $('#name').val(),

@@ -34,7 +34,7 @@ export class LoginComponent {
 
   loginUser(){
     if(!this.email?.invalid || !this.pass?.invalid){
-      this.http.post('http://127.0.0.1:8000/user/login',this.loginForm.value).subscribe((res:any)=>{
+      this.http.post('https://lightyellow-gaur-319608.hostingersite.com:8000/user/login',this.loginForm.value).subscribe((res:any)=>{
         console.log(res)
         if(res.result){
           alert('Login success')

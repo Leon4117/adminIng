@@ -25,7 +25,7 @@ export class ProductsComponent {
   data: any;
 
   constructor(private http: HttpClient, private router: Router){
-    this.http.get('http://127.0.0.1:8000/product').subscribe(data => {
+    this.http.get('https://lightyellow-gaur-319608.hostingersite.com:8000/product').subscribe(data => {
       this.data = data;
 
       setTimeout(() => {
@@ -137,7 +137,7 @@ export class ProductsComponent {
   }
 
   submitDeleteModal(){
-    let url = "http://127.0.0.1:8000/product/" + $('#id_site').val()
+    let url = "https://lightyellow-gaur-319608.hostingersite.com:8000/product/" + $('#id_site').val()
     this.http.delete(url).subscribe(data => {
       console.log(data)
       location.reload()

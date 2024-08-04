@@ -18,7 +18,7 @@ export class ShowComponent {
   dato:any;
   constructor(private _router: ActivatedRoute, private http: HttpClient, private route: Router){
     this.dato = this._router.snapshot.paramMap.get('id');
-    let url = "http://127.0.0.1:8000/product/" + this.dato;
+    let url = "https://lightyellow-gaur-319608.hostingersite.com:8000/product/" + this.dato;
     this.http.get(url).subscribe(data => {
       this.dato = data;
     });
