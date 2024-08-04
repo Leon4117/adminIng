@@ -1,0 +1,147 @@
+<div class="main-wrapper">
+  <admin-navbar></admin-navbar>
+  <div class="page-wrapper">
+    <admin-navbar-top></admin-navbar-top>
+    <div class="page-content">
+      <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Producto {{ dato.id }}</h4>
+                    <form id="form" class="cmxform" autocomplete="off" method="post" action="">
+
+                        <div class="row">
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Nombre</label>
+                                    <div class="col-sm-8">
+                                       <input type="text" class="form-control" name="name" placeholder="Nombre del Sitio" value="{{dato.name}}" disabled>
+                                    </div>
+                               </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Modelo</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="link" placeholder="Enlace del Sitio" value="{{dato.model}}" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                              <div class="form-group row">
+                              <label class="col-sm-4 col-form-label">Precio</label>
+                                  <div class="col-sm-8">
+                                      <input type="text" class="form-control" name="link" placeholder="Enlace del Sitio" value="{{dato.price}}" disabled>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                              <div class="form-group row">
+                              <label class="col-sm-4 col-form-label">Características</label>
+                                  <div class="col-sm-8">
+                                      <input type="text" class="form-control" name="link" placeholder="Enlace del Sitio" value="{{dato.characteristic}}" disabled>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Descripción</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="link" placeholder="Enlace del Sitio" value="{{dato.description}}" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Calificación</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="link" placeholder="Enlace del Sitio" value="{{dato.qualification}}" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Existencias</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="link" placeholder="Enlace del Sitio" value="{{dato.existence_qty}}" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Disponibilidad</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="link" placeholder="Enlace del Sitio" value="{{dato.availability}}" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Estado</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="link" placeholder="Enlace del Sitio" value="{{dato.status}}" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            @if (dato.img_1 != null) {
+                                <div class="col-lg-6 col-12">
+                                    <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Imagen 1</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" name="link" placeholder="Enlace del Sitio" value="{{dato.img_1}}" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            @if (dato.img_2 != null) {
+                                <div class="col-lg-6 col-12">
+                                    <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Imagen 2</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" name="link" placeholder="Enlace del Sitio" value="{{dato.img_2}}" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            @if (dato.img_3 != null) {
+                                <div class="col-lg-6 col-12">
+                                    <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Imagen 3</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" name="link" placeholder="Enlace del Sitio" value="{{dato.img_3}}" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            @if (dato.img_4 != null) {
+                                <div class="col-lg-6 col-12">
+                                    <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Imagen 4</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" name="link" placeholder="Enlace del Sitio" value="{{dato.img_4}}" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group row">
+                                    <div class="col-sm-12 col-form-label text-right">
+                                        <button type="button" class="btn btn-secondary btn-icon-text mr-2" (click)="cancelCreate()">
+                                            <i class="btn-icon-prepend" data-feather="x-circle"></i>
+                                            Regresar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>

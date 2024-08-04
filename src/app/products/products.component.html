@@ -1,0 +1,85 @@
+<div class="main-wrapper">
+  <admin-navbar></admin-navbar>
+  <div class="page-wrapper">
+    <admin-navbar-top></admin-navbar-top>
+    <div class="page-content">
+
+      <nav class="page-breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Productos</li>
+        </ol>
+      </nav>
+
+      <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex flex-wrap justify-content-between mb-3">
+                <h6 class="card-title">Productos</h6>
+                <div>
+                  <a class="btn btn-success btn-icon-text ml-2" routerLink="/create" routerLinkActive="active">
+                      <i data-feather="file-plus"></i>
+                      Nuevo
+                  </a>
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table id="productsTable" class="table">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Nombre</th>
+                      <th>Precio</th>
+                      <th>Descripción</th>
+                      <th>Calificacion</th>
+                      <th>Existencias</th>
+                      <th>Estatus</th>
+                      <th>Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer-admin></footer-admin>
+  </div>
+</div>
+
+<div id="delete-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="change-record" aria-hidden="true"  data-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+
+          <div class="modal-header">
+              <h5 id="payment-title" class="modal-title">Eliminar Producto</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body text-justify">
+              <p>¿Desea eliminar este producto?</p>
+              <form id="delete-form" method="post">
+                  <input type="hidden" name="id_site" id="id_site" value="">
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary btn-icon-text mr-2" data-dismiss="modal">
+                  <i class="btn-icon-prepend" data-feather="x-circle"></i>
+                  Cerrar
+              </button>
+              <button type="button" class="btn btn-danger btn-icon-text mr-2" (click)="submitDeleteModal()">
+                  <i class="btn-icon-prepend" data-feather="trash-2"></i>
+                  Eliminar
+              </button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<router-outlet/>

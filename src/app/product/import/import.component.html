@@ -1,0 +1,32 @@
+<div class="main-wrapper">
+  <admin-navbar></admin-navbar>
+  <div class="page-wrapper">
+    <admin-navbar-top></admin-navbar-top>
+    <div class="page-content">
+      <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h6 class="card-title">Importar productos</h6>
+              <form id="form" class="cmxform">
+                <div class="col-lg-12">
+                  <div class="form-group row">
+                      <label class="col-sm-4 col-form-label">Advertencia de archivo: Solo se admite archivos con extensión .csv<br>Formato: [NOMBRE, MODELO, PRECIO, CARACTERISTICAS, DESCRIPCIÓN]</label>
+
+                      <div class="col-md-12 stretch-card grid-margin grid-margin-md-0">
+                          <div class="card">
+                              <div class="card-body">
+                                  <input type = "file" id = 'file-select1'  class ="dropify" data-show-errors="true" data-max-file-size="2M" data-allowed-file-extensions="csv" data-show-remove="true" name="official_ident_1"/>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

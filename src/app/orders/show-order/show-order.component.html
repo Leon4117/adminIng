@@ -1,0 +1,131 @@
+<div class="main-wrapper">
+  <admin-navbar></admin-navbar>
+  <div class="page-wrapper">
+    <admin-navbar-top></admin-navbar-top>
+    <div class="page-content">
+      <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Orden {{ dato.id }}</h4>
+                    <form id="form" class="cmxform" autocomplete="off" method="post" action="">
+
+                        <div class="row">
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Folio</label>
+                                    <div class="col-sm-8">
+                                       <input type="text" class="form-control" name="name" placeholder="Nombre del Sitio" value="{{dato.folio}}" disabled>
+                                    </div>
+                               </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Nombre Cliente</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="link" placeholder="Enlace del Sitio" value="{{dato.customer_name}}" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                              <div class="form-group row">
+                              <label class="col-sm-4 col-form-label">Nombre Cliente</label>
+                                  <div class="col-sm-8">
+                                      <input type="text" class="form-control" name="link" placeholder="Enlace del Sitio" value="{{dato.customer_surname}}" disabled>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                              <div class="form-group row">
+                              <label class="col-sm-4 col-form-label">Correo Electrónico</label>
+                                  <div class="col-sm-8">
+                                      <input type="text" class="form-control" name="link" placeholder="Enlace del Sitio" value="{{dato.email}}" disabled>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Teléfono</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="link" placeholder="Enlace del Sitio" value="{{dato.phone}}" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Dirección</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="link" placeholder="Enlace del Sitio" value="{{dato.address}}" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Ciudad</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="link" placeholder="Enlace del Sitio" value="{{dato.city}}" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">País</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="link" placeholder="Enlace del Sitio" value="{{dato.country}}" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-12">
+                                <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Total</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" name="link" placeholder="Enlace del Sitio" value="{{dato.total}}" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="card-title">Productos</h4>
+                            @for(product of dato.order_products; track dato.id){
+                              <div class="card w-100">
+                                <div class="card-body">
+                                  <div class="col-lg-12 col-12">
+                                    <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Modelo</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" name="link" placeholder="Enlace del Sitio" value="{{product.model}}" disabled>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-12 col-12">
+                                    <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Cantidad</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" name="link" placeholder="Enlace del Sitio" value="{{product.pivot.price}}" disabled>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            }
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group row">
+                                    <div class="col-sm-12 col-form-label text-right">
+                                        <button type="button" class="btn btn-secondary btn-icon-text mr-2" (click)="cancelCreate()">
+                                            <i class="btn-icon-prepend" data-feather="x-circle"></i>
+                                            Regresar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
